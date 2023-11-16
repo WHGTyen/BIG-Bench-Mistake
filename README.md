@@ -2,7 +2,9 @@
 
 BIG-Bench Mistake is a dataset of chain-of-thought (CoT) outputs annotated with
 the location of the first logical mistake. This dataset was released as part of
-our paper, [*LLMs cannot find reasoning errors, but can correct them!*](https://arxiv.org/abs/2311.08516).
+our paper, [_LLMs cannot find reasoning errors, but can correct them!_](https://arxiv.org/abs/2311.08516).
+
+![Our user interface for annotation](https://github.com/WHGTyen/BIG-Bench-Mistake/blob/main/annotation_guidelines/ui.png)
 
 ## Tasks
 
@@ -30,21 +32,21 @@ Each JSONL file contains outputs for a task from the
 [BIGBench](https://github.com/google/BIG-bench/tree/main) dataset. Each line
 contains a dictionary with the following keys:
 
--   `input`: A string containing the input question. For multiple choice tasks
-    (Tracking Shuffled Objects and Logical Deduction), this also includes the
-    options.
--   `steps`: A list of strings containing each step in the chain of thoughts.
-    Note that this does not include the prefixes `Thought 1:`, `Thought 2:`,
-    etc.
--   `answer`: A string containing the model's answer, extracted from the list of
-    steps using the regex `(?<=[Tt]he answer is).*$`. For multiple choice tasks
-    (Tracking Shuffled Objects and Logical Deduction), this is the letter
-    indicating the option (e.g. `(A)`).
--   `target`: A string containing the target "correct" answer.
--   `mistake_index`: The index of the step containing the first logical mistake.
-    Please note that **this number is 0-indexed**, so 0 indicates a mistake in
-    the first step, 1 indicates a mistake in the second step, and so on. If
-    there are no mistakes, this value is null.
+- `input`: A string containing the input question. For multiple choice tasks
+  (Tracking Shuffled Objects and Logical Deduction), this also includes the
+  options.
+- `steps`: A list of strings containing each step in the chain of thoughts.
+  Note that this does not include the prefixes `Thought 1:`, `Thought 2:`,
+  etc.
+- `answer`: A string containing the model's answer, extracted from the list of
+  steps using the regex `(?<=[Tt]he answer is).*$`. For multiple choice tasks
+  (Tracking Shuffled Objects and Logical Deduction), this is the letter
+  indicating the option (e.g. `(A)`).
+- `target`: A string containing the target "correct" answer.
+- `mistake_index`: The index of the step containing the first logical mistake.
+  Please note that **this number is 0-indexed**, so 0 indicates a mistake in
+  the first step, 1 indicates a mistake in the second step, and so on. If
+  there are no mistakes, this value is null.
 
 ## Citation
 
