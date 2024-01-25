@@ -53,7 +53,7 @@ contains a dictionary with the following keys:
 ```
 @article{tyen2023llms,
   title={LLMs cannot find reasoning errors, but can correct them!},
-  author={Tyen, Gladys and Mansoor, Hassan and Chen, Peter and Mak, Tony, and C\u{a}rbune, Victor},
+  author={Tyen, Gladys and Mansoor, Hassan and C\u{a}rbune, Victor and Chen, Peter and Mak, Tony},
   journal={arXiv preprint arXiv:2311.08516},
   year={2023}
 }
